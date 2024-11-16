@@ -6,11 +6,11 @@ void inicia_lista (t_lista *l) {
 int lista_vazia (t_lista *l) {
     return (l->primeiro == NULL);
 }
-void insere_inicio (int i, t_lista *l) {
+void insere_inicio(int i, t_lista *l) {
     t_no * novo = constroi_no(i);
     if (novo != NULL) {
         if (!lista_vazia (l)) {
-            novo->proximo = l->primeiro;
+            novo->proximo = l->primeiro; 
         }
         l->primeiro = novo;
     }
@@ -92,4 +92,19 @@ int soma_valores(t_lista * l) {
         }
     }
     return soma;
+}
+
+int pares (t_lista *l){
+    t_no * aux;
+    int par = 0;
+    if(!lista_vazia(l)){
+        aux = l->primeiro;
+        while(aux != NULL){  // Percorre toda a lista
+            if(aux->info % 2 == 0){
+                par++;
+            }
+            aux = aux->proximo;
+        }
+    }
+    return par;
 }

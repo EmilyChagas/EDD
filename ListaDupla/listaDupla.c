@@ -82,3 +82,4 @@ int remove_Fim(t_lista_dupla *l){
     free(aux);
     return i;
 }
+

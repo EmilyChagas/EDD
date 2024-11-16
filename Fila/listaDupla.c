@@ -75,3 +75,20 @@ int desenfileira (t_lista_dupla *l){
     return i;
 }
 
+void vai_para_o_final(t_lista_dupla *l){
+    if(!lista_vazia(l) && l->primeiro != l->ultimo){  
+        int troca = l->primeiro->info;
+        desenfileira(l);
+        enfileira(troca, l);
+    }
+}
+
+void remove_pares(t_lista_dupla *l) {
+    int tamanho = l->n_nois; 
+    for (int i = 0; i < tamanho; i++) {
+        int valor = desenfileira(l);
+        if (valor % 2 != 0) {
+            enfileira(valor, l);
+        }
+    }
+}
