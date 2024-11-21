@@ -83,3 +83,17 @@ int remove_Fim(t_lista_dupla *l){
     return i;
 }
 
+int pares (t_lista_dupla *l){
+    t_no_duplo * aux;
+    int par = 0;
+    if(!lista_vazia(l)){
+        aux = l->primeiro;
+        while(aux != NULL){  // Percorre toda a lista
+            if(aux->info % 2 == 0){
+                par++;
+            }
+            aux = aux->proximo;
+        }
+    }
+    return par;
+}

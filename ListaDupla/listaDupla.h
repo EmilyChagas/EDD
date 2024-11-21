@@ -16,3 +16,4 @@ void exibir_lista(t_lista_dupla *, char *);
 int remove_Inicio (t_lista_dupla *);
 int remove_Fim(t_lista_dupla *);
 
+int pares (t_lista_dupla *);
